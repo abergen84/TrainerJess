@@ -40,7 +40,29 @@ body {
   -webkit-transition: opacity .25s ease;
           transition: opacity .25s ease; }
 
-/*#homepage {
-	background-color: red;
+/*.content {
+	position: relative;
+	max-width: 600px;
 }*/
 
+.homepage {
+	background-color: red;
+	display: inline-block;
+	width: 100px;
+	height: 50px;
+	/*position: absolute;*/
+}
+
+.header {
+	background-color: blue;
+	display: block;
+	height: 50px;
+	/*position: absolute;*/
+}
+
+.footer {
+	background-color: green;
+	display: block;
+	height: 50px;
+	/*position: absolute;*/
+}

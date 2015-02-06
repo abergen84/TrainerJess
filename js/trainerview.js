@@ -8,13 +8,20 @@
 		// className: "maincontent",
 		template: "homepage",
 
+		getTemplate: function(template){
+			 return $.get("./templates/" + this.template + ".html").then(function(templateX) {
+			 	return templateX;
+            });
+		},
+
 		render: function(){
 			var self = this;
-            $.get("./templates/" + this.template + ".html", function(template) {
-                var html = $(template).html();
-                self.$el.html(html);
+            $.when(
+            	this.getTemplate(this.template)
+            	).then(function(template){
+            	//document.querySelector
+            	$('.content').html(template);
             });
-            // return this;
 		},
 
 		initialize: function(){
