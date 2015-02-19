@@ -15,6 +15,7 @@ function app(){
         //views
         {url: "./js/appview.js"},
         {url: "./js/trainerview.js"},
+        {url: "./js/bioview.js"},
 
         //router
         {url: "./js/router.js"}

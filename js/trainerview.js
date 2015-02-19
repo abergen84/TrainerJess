@@ -9,17 +9,17 @@
 		template: "homepage",
 
 		getTemplate: function(template){
-			 return $.get("./templates/" + this.template + ".html").then(function(templateX) {
-			 	return templateX;
+			 return $.get("./templates/" + this.template + ".html").then(function(data) {
+			 	return data;
             });
 		},
 
 		render: function(){
-			var self = this;
+			// var self = this;
             $.when(
             	this.getTemplate(this.template)
             	).then(function(template){
-            	//document.querySelector
+            	// document.querySelector
             	$('.content').html(template);
             });
 		},
