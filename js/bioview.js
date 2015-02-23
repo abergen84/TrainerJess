@@ -8,29 +8,27 @@
 
 		getTemplate: function(template){
 			return $.get("./templates/" + this.template + ".html").then(function(data){
+				// console.log(data);
 				return data;
 			});
 		},
 
-		events: {
-			"click #bio": "render"
-		},
-
 		render: function(){
-			$.when(this.getTemplate(this.template)).then(function(template){
-				$('content').html(template);
+			$.when(
+				this.getTemplate(this.template)
+				).then(function(template){
+				$('.content').html(template);
+				// console.log(template);
 			});
 		},
 
 		initialize: function(){
-			this.render();
+			// this.render();
 		}
 	});
 
 
 app.BioView = BioView;
-
-
 
 
 })(window, undefined);

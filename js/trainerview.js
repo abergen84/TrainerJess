@@ -10,22 +10,21 @@
 
 		getTemplate: function(template){
 			 return $.get("./templates/" + this.template + ".html").then(function(data) {
+			 	console.log(data);
 			 	return data;
             });
 		},
 
 		render: function(){
-			// var self = this;
             $.when(
             	this.getTemplate(this.template)
             	).then(function(template){
-            	// document.querySelector
             	$('.content').html(template);
             });
 		},
 
 		initialize: function(){
-			this.render();
+			// this.render();
 		}
 
 	});

@@ -5,8 +5,10 @@
 	var TrainerRouter = Backbone.Router.extend({
 
 		routes: {
-			"*default": "page1",
-			"bio": "page2"
+			"contact": "page4",
+			"services": "page3",
+			"bio": "page2",
+			"*default": "page1"
 		},
 
 		hideAll: function() {
@@ -25,6 +27,16 @@
 			this.bioview.render();
 		},
 
+		page3: function(){
+			this.hideAll();
+			this.servicesview.render();
+		},
+
+		page4: function(){
+			this.hideAll();
+			this.contactview.render();
+		},
+
 		initialize: function(){
 			this.appview = new app.AppView();
 
@@ -34,7 +46,13 @@
 			this.bioview = new app.BioView();
 			this.appview.$el.append(this.bioview.el);
 
-			this.views = [this.trainerview, this.bioview];
+			this.servicesview = new app.ServicesView();
+			this.appview.$el.append(this.servicesview.el);
+
+			this.contactview = new app.ContactView();
+			this.appview.$el.append(this.contactview.el);
+
+			this.views = [this.trainerview, this.bioview, this.servicesview, this.contactview];
 
 
 			Backbone.history.start();

@@ -1,4 +1,5 @@
-@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+@import url(http://fonts.googleapis.com/css?family=Oswald:400,700);
+@import url(http://fonts.googleapis.com/css?family=PT+Mono);
 
 /**
  * BOX-SIZING
@@ -41,68 +42,105 @@
 body {
   -webkit-transition: opacity .25s ease;
           transition: opacity .25s ease;
+          font-size: 18px;
       }
 
-html {
-    background: url('./bg.jpg') no-repeat center center;
-    background-size: cover;
-    background-attachment: fixed;
+html, body {
+	background-color: #ececea;
 }
 
-html::after {
-	content: "";
-    display: block;
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: rgba(0,0,0,0.7);
-    z-index: -1;
+.container > * {
+	font-family: 'PT Mono';
 }
 
-.left {
-	background-color: #0288D1;
-	position: absolute;
-	float: left;
-	margin: 10% 0 0 5%;
-	z-index: 1;
-	height: 500px;
-	width: 200px;
-	max-width: 15%;
-	max-height: 90%;
+.header {
+	position: relative;
+	display: block;
+	height: 250px;
+	background-color: white;
 }
 .content {
-	position: absolute;
-	float: left;
-	margin: 12% 0 0 8%;
-	height: 500px;
-	max-height: 90%;
-	width: 960px;
-	max-width: 90%;
-	background-color: rgba(255, 255, 255, .7);
-	padding: 20px 20px 20px 13%;
+	position: relative;
+	display: block;
+	background-color: #ececea;
 }
 
+.footer {
+	position: fixed;
+	display: block;
+	background-color: white;
+	width: 100%;
+	height: 40px;
+	bottom: 0;
+}
+
+.mainlogo {
+	position: relative;
+	top: 15%;
+	width: 100%;
+	font-family: 'Oswald';
+	text-transform: uppercase;
+	font-size: 8rem;
+	text-align: center;
+	color: #FFF700;
+}
 .links {
 	text-align: center;
-	font-family: 'Lato';
-	font-weight: 700;
 	font-size: 1.5em;
-	margin-top: 25%;
 }
 
-a:link {
+a.linkspace:link {
 	text-decoration: none;
-	color: white;
 	margin-left: 1em;
 }
 
-p {
-	font-family: 'Lato';
-	font-weight: 300;
+a:visited {
+	color: black;
 }
 
-a.linkspace {
-	margin-bottom: 3em;
+p {
+	margin-left: 10%;
+	margin-right: 10%;
+	text-align: justify;
+}
+
+.lastparagraph {
+	margin-bottom: 50px;
+}
+
+h3 {
+	padding-top: 10%;
+	margin-left: 10%;
+}
+
+h4 {
+	margin-left: 10%;
+}
+
+img.logo {
+	padding-top: 5%;
+	width: 100%;
+}
+
+ol {
+	margin: 0 10% 50px 10%;
+}
+
+.icons {
+	right: 0;
+	position: absolute;
+	padding: 0 .5rem;
+}
+
+img.arrow {
+	right: 100px;
+	height: 40px;
+	position: absolute;
+	z-index: 1;
+}
+
+@media screen and (max-width: 600px){
+	p {
+		font-size: .75rem;
+	}
 }
