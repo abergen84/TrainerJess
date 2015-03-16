@@ -105,6 +105,11 @@ p {
 	text-align: justify;
 }
 
+ul {
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
 .lastparagraph {
 	margin-bottom: 50px;
 }
@@ -139,8 +144,27 @@ img.arrow {
 	z-index: 1;
 }
 
+img.certpics {
+	height: 100px;
+	width: 125px;
+	padding-bottom: 20px;
+}
+
+img.biopic {
+	margin-left: 10%;
+}
+
+.copyright {
+	position: absolute;
+	/*color: black;*/
+	left: 10px;
+	font-size: 12px;
+	padding-top: 10px;
+}
+
 @media screen and (max-width: 600px){
 	p {
 		font-size: .75rem;
 	}
 }
+

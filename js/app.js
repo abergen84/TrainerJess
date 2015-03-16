@@ -18,6 +18,8 @@ function app(){
         {url: "./js/bioview.js"},
         {url: "./js/servicesview.js"},
         {url: "./js/contactview.js"},
+        {url: "./js/certsview.js"},
+
 
         //router
         {url: "./js/router.js"}

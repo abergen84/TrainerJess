@@ -5,6 +5,7 @@
 	var TrainerRouter = Backbone.Router.extend({
 
 		routes: {
+			"certs": "page5",
 			"contact": "page4",
 			"services": "page3",
 			"bio": "page2",
@@ -37,6 +38,11 @@
 			this.contactview.render();
 		},
 
+		page5: function(){
+			this.hideAll();
+			this.certsview.render();
+		},
+
 		initialize: function(){
 			this.appview = new app.AppView();
 
@@ -52,7 +58,10 @@
 			this.contactview = new app.ContactView();
 			this.appview.$el.append(this.contactview.el);
 
-			this.views = [this.trainerview, this.bioview, this.servicesview, this.contactview];
+			this.certsview = new app.CertsView();
+			this.appview.$el.append(this.certsview.el);
+
+			this.views = [this.trainerview, this.bioview, this.servicesview, this.contactview, this.certsview];
 
 
 			Backbone.history.start();
